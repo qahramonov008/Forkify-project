@@ -799,6 +799,7 @@ const uploadRecipe = async function(newRecipe) {
             ingredients
         };
         const data = await (0, _helpers.AJAX)(`${(0, _config.API_URL)}?key=${(0, _config.KEY)}`, addedRecipe);
+        console.log(data);
         state.recipe = createRecipeObject(data.data);
         addBookmark(state.recipe);
     } catch (error) {
